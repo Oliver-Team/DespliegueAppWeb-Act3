@@ -127,3 +127,8 @@ Comprobamos que el servicio se está ejecutando.
 *$ sudo systemctl stop mysql.*
 
 *$ sudo systemctl start mysql.*
+
+
+Archivo context para configurar.
+
+Var/lib/tomcat9/conf/context.xml
