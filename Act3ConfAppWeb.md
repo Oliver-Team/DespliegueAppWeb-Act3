@@ -129,31 +129,3 @@ Comprobamos que el servicio se está ejecutando.
 *$ sudo systemctl start mysql.*
 
 
-A continuación, vamos a descargar las librerías necesarias para nuestra conexión de la BBDD. En este caso, vamos a comprobar la version de MySQL para ver cual debemos descargarnos. 
-
-![](Imagen%2018.png) 
-
-
-Vemos que nuestra version es la 8.0.23 por lo que vamos a buscar dicho archivo JAR para la conexión y añadirlo en la carpeta lib del tomcat.
-
-
-![](Imagen%2019.png) 
-
-![](Imagen%2020.png) 
-
-El siguiente paso, es editar el archivo context.xml del Tomcat (/conf/context.xml) y añadir el datasource para después poder recuperarlo desde java con JNDI.
-
-Añadimos lo siguiente:
-
-![](Imagen%2021.png) 
-
-Por otra parte en el archivo web.xml:
-
-![](Imagen%2022.png) 
-
-A continuación, vamos a crear nuestra BBDD proyecto en MySQL gracias al WorkBench.
-
-![](Imagen%2023.png) 
-
-![](Imagen%2024.png) 
-
