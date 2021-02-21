@@ -150,7 +150,18 @@ Por otra parte en el archivo web.xml:
 
 ![](Imagen%2022.png) 
 
-A continuación, vamos a crear nuestra BBDD proyecto en MySQL gracias al WorkBench.
-
 ![](Imagen%2023.png) 
+A continuación, vamos a crear nuestra BBDD proyecto en MySQL gracias al WorkBench.
+![](Imagen%2024.png) 
+
+Aquí, podemos ver nuestra base de datos creada. 
+
+Una vez configurado todo lo anterior, solo nos quedaría ir al tomcat para ver nuestra base de datos.
+
+![](Imagen%2025.png)
+
+Una vez clicamos vemos como nos aparecen nuestras tablas y la base de datos está totalmente operativa.
+
+![](Imagen%2026.png)
+
 
