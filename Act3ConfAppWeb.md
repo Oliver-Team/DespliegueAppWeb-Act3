@@ -144,7 +144,7 @@ Añadimos lo siguiente:
 
 
 
-Por otra parte en el archivo web.xml:
+Por otra parte en los archivos context.xml y web.xml:
 
 ![](Imagen%2022.png) 
 
