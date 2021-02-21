@@ -128,10 +128,11 @@ Comprobamos que el servicio se está ejecutando.
 
 *$ sudo systemctl start mysql.*
 
+![](Imagen%2018.png) 
 
 A continuación, vamos a descargar las librerías necesarias para nuestra conexión de la BBDD. En este caso, vamos a comprobar la version de MySQL para ver cual debemos descargarnos. 
 
-![](Imagen%2018.png) 
+![](Imagen%2019.png) 
 
 
 Vemos que nuestra version es la 8.0.23 por lo que vamos a buscar dicho archivo JAR para la conexión y añadirlo en la carpeta lib del tomcat.
