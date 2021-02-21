@@ -99,7 +99,6 @@ Cargamos el archivo **.war** que nos hemos descargado, necesario para desplegar 
 ![](Imagen%2013.png) 
 
  
-
 Y una vez que la hemos cargado, la ejecutamos:
 
 ![](Imagen%2014.png)  
@@ -122,16 +121,13 @@ Comprobamos que el servicio se está ejecutando.
 
 ![](Imagen%2017.png)  
 
-
-
 *$ sudo systemctl stop mysql.*
 
 *$ sudo systemctl start mysql.*
 
+![](Imagen%2018.png) 
 
 A continuación, vamos a descargar las librerías necesarias para nuestra conexión de la BBDD. En este caso, vamos a comprobar la version de MySQL para ver cual debemos descargarnos. 
-
-![](Imagen%2018.png) 
 
 Vemos que nuestra version es la 8.0.23 por lo que vamos a buscar dicho archivo JAR para la conexión y añadirlo en la carpeta lib del tomcat.
 
@@ -140,11 +136,13 @@ Vemos que nuestra version es la 8.0.23 por lo que vamos a buscar dicho archivo J
 
 ![](Imagen%2020.png) 
 
+![](Imagen%2021.png) 
+
 El siguiente paso, es editar el archivo context.xml del Tomcat (/conf/context.xml) y añadir el datasource para después poder recuperarlo desde java con JNDI.
 
 Añadimos lo siguiente:
 
-![](Imagen%2021.png) 
+
 
 Por otra parte en el archivo web.xml:
 
