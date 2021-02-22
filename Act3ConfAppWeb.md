@@ -162,4 +162,4 @@ Una vez clicamos vemos como nos aparecen nuestras tablas y la base de datos est√
 
 ![](Imagen%2026.png)
 
-
+![](Imagen%2027.png)
