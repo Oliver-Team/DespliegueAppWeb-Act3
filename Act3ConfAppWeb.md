@@ -163,3 +163,52 @@ Una vez clicamos vemos como nos aparecen nuestras tablas y la base de datos est�
 ![](Imagen%2026.png)
 
 ![](Imagen%2027.png)
+
+## VERÓNICA PARRA – PARTE III
+
+Instalamos el servidor Apache en nuestro equipo con el comando 
+
+ **sudo apt install apache2**
+ 
+ A continuación, entramos como super usuario, ya que tenemos que modificar archivos de configuración y necesitamos tener todos los privilegios.
+ 
+ ![](Imagen%2028.png)
+ 
+ En el terminal, vamos al directorio **/var/www/html**. Dentro de la carpeta html, con el comando mkdir, creamos un directorio al que llamaremos CDN.
+Listamos el contenido para comprobar que se ha creado correctamente:
+
+ ![](Imagen%2029.png)
+ 
+Ahora, vamos directorio en el que se encuentran los tres recursos a desplegar. En mi caso, los recursos los guardé en una carpeta a la que llamé “apache”, dentro de la carpeta del proyecto, para tenerlos más unificados.
+
+![](Imagen%2031.png)
+
+Movemos los archivos al directorio que acabamos de crear. Utilizaremos el comando mv seguido del archivo que queremos mover y la ruta de destino:
+
+![](Imagen%2032.png)
+
+Si entramos en nuestro localhost e indicamos la carpeta, vemos que los archivos aparecen listados:
+
+![](Imagen%2033.png)
+
+Ahora vamos a crear la variable de entorno para enlazar la aplicación desplegada en Tomcat con los recursos que tenemos en el directorio CDN.
+Seguimos la ruta **/var/lib/tomcat/conf** y editamos el archivo **context.xml.**
+
+![](Imagen%2034.png)
+
+Entramos en el editor y añadimos las líneas dentro del Context:
+
+![](Imagen%2035.png)
+
+Le indicamos el nombre del recurso que debe buscar y la dirección ip en la que encontrará los recursos.
+Guardamos los cambios y paramos los servidores y volvemos a arrancarlos para que la modificación que hemos realizado en el xml se ejecute.
+
+![](Imagen%2036.png)
+
+Abrimos el navegador y accedemos a la aplicación. Pulsamos el botón “CDN” y veremos todos los archivos desplegados en la página:
+
+![](Imagen%2037.png)
+![](Imagen%2038.png)
+
+
+
