@@ -230,7 +230,7 @@ Lo siguiente que vamos hacer es crear los dos usuarios que solicita la practica 
 $ adduser administrador
 $ echo “administrador”  | tee -a /etc/vsftpd.userlist
 
- 
+![](Imagen%2041.png) 
 
 
 
@@ -240,11 +240,11 @@ $ echo “administrador”  | tee -a /etc/vsftpd.userlist
 $ sudo adduser registrado
 $ echo “registrado”  | tee -a /etc/vsftpd.userlist
 
- 
+ ![](Imagen%2042.png)
 
 Comprobamos en el archivo de configuración “vsftpd.userlist” que están creado los dos usuarios
 
- 
+![](Imagen%2043.png) 
 
 
 El siguiente paso que vamos a realizar es editar el archivo “vsftpd.conf” y editamos los siguientes parámetros:
@@ -253,14 +253,15 @@ El siguiente paso que vamos a realizar es editar el archivo “vsftpd.conf” y 
 # restringir el acceso de algunos usuarios
 # habilitar lista de usuarios restringidos
 
+![](Imagen%2044.png)
  
 Añadimos en el siguiente archivo “vsftpd.conf” de configuración las siguientes líneas…
 
- 
+ ![](Imagen%2045.png)
 
 Me introduzco en el “context.xml” para editar en el “<Environment>” y dentro de “value” introducimos la IP que nos da “http://192.168.1.49/FTP/”
 
- 
+![](Imagen%2046.png) 
 
 
 
@@ -280,7 +281,7 @@ Comprobamos que los puertos 20 y 21 están activos, para ellos introducimos lo s
 
 $ sudo ufw status
 
- 
+ ![](Imagen%2047.png)
 
 Creamos las carpetas FTP y damos los permisos.
 
@@ -288,34 +289,34 @@ $ sudo mkdir -p /home/registrado/ftp/upload
 $ chmod 550 /home/registrado/ftp
 $ chmod 750 /home/registrado/ftp/upload
 
- 
- 
+ ![](Imagen%2048.png)
+ ![](Imagen%2049.png)
 
 Para reiniciar el servicio hay que introducir los 2 siguientes comandos
 
 $ systemctl start vsftpd
 $ systemctl enable vsftpd
 
- 
+![](Imagen%2050.png) 
 
 Probamos el FTP con el siguiente comando
-
+![](Imagen%2051.png)
  
 1
 
- 
+![](Imagen%2052.png) 
 
 2
 
- 
+![](Imagen%2053.png)
 
 
 
 3
 
- 
+![](Imagen%2054.png) 
 
 4
 
- 
+![](Imagen%2055.png) 
 
