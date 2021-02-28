@@ -217,13 +217,13 @@ Procedemos a la instalación del FTP para ello vamos a utilizar el siguiente com
 
 $ sudo apt install -y vsftpd
 
- 
+![](Imagen%2039.png) 
 
 Vamos a comprobar que funciona introduciendo el siguiente comando
 
 $ systemctl status vsftpd
 
- 
+ ![](Imagen%2040.png)
 
 Lo siguiente que vamos hacer es crear los dos usuarios que solicita la practica y asignarle los correspondientes permisos
 
