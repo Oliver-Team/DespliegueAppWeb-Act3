@@ -213,3 +213,109 @@ Abrimos el navegador y accedemos a la aplicación. Pulsamos el botón “CDN” 
 
 ## JAVIER GONZALEZ – PARTE IV
 
+Procedemos a la instalación del FTP para ello vamos a utilizar el siguiente comando 
+
+$ sudo apt install -y vsftpd
+
+ 
+
+Vamos a comprobar que funciona introduciendo el siguiente comando
+
+$ systemctl status vsftpd
+
+ 
+
+Lo siguiente que vamos hacer es crear los dos usuarios que solicita la practica y asignarle los correspondientes permisos
+
+$ adduser administrador
+$ echo “administrador”  | tee -a /etc/vsftpd.userlist
+
+ 
+
+
+
+
+
+
+$ sudo adduser registrado
+$ echo “registrado”  | tee -a /etc/vsftpd.userlist
+
+ 
+
+Comprobamos en el archivo de configuración “vsftpd.userlist” que están creado los dos usuarios
+
+ 
+
+
+El siguiente paso que vamos a realizar es editar el archivo “vsftpd.conf” y editamos los siguientes parámetros:
+
+# deshabilitar anónimo y habilitar usuarios
+# restringir el acceso de algunos usuarios
+# habilitar lista de usuarios restringidos
+
+ 
+Añadimos en el siguiente archivo “vsftpd.conf” de configuración las siguientes líneas…
+
+ 
+
+Me introduzco en el “context.xml” para editar en el “<Environment>” y dentro de “value” introducimos la IP que nos da “http://192.168.1.49/FTP/”
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Comprobamos que los puertos 20 y 21 están activos, para ellos introducimos lo siguiente
+
+$ sudo ufw status
+
+ 
+
+Creamos las carpetas FTP y damos los permisos.
+
+$ sudo mkdir -p /home/registrado/ftp/upload
+$ chmod 550 /home/registrado/ftp
+$ chmod 750 /home/registrado/ftp/upload
+
+ 
+ 
+
+Para reiniciar el servicio hay que introducir los 2 siguientes comandos
+
+$ systemctl start vsftpd
+$ systemctl enable vsftpd
+
+ 
+
+Probamos el FTP con el siguiente comando
+
+ 
+1
+
+ 
+
+2
+
+ 
+
+
+
+3
+
+ 
+
+4
+
+ 
+
