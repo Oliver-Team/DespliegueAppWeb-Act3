@@ -249,9 +249,10 @@ Comprobamos en el archivo de configuración “vsftpd.userlist” que están cre
 
 El siguiente paso que vamos a realizar es editar el archivo “vsftpd.conf” y editamos los siguientes parámetros:
 
-# deshabilitar anónimo y habilitar usuarios
-# restringir el acceso de algunos usuarios
-# habilitar lista de usuarios restringidos
+- deshabilitar anónimo y habilitar usuarios
+-  restringir el acceso de algunos usuarios
+-  habilitar lista de usuarios restringidos
+
 
 ![](Imagen%2044.png)
  
@@ -290,6 +291,7 @@ $ chmod 550 /home/registrado/ftp
 $ chmod 750 /home/registrado/ftp/upload
 
  ![](Imagen%2048.png)
+ 
  ![](Imagen%2049.png)
 
 Para reiniciar el servicio hay que introducir los 2 siguientes comandos
@@ -300,6 +302,7 @@ $ systemctl enable vsftpd
 ![](Imagen%2050.png) 
 
 Probamos el FTP con el siguiente comando
+
 ![](Imagen%2051.png)
  
 1
