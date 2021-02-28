@@ -323,3 +323,18 @@ Probamos el FTP con el siguiente comando
 
 ![](Imagen%2055.png) 
 
+5
+
+![](Imagen%2056.png) 
+
+6
+
+![](Imagen%2057.png) 
+
+7
+
+![](Imagen%2058.png) 
+
+
+
+
